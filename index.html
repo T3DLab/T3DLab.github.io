@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T3DLab - Sao chép liên kết</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 class="logo">T3DLab</h1>
+    <nav>
+      <a href="index.html" class="active">Sao chép liên kết</a>
+      <a href="3d.html">Bán in 3D</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Sao chép liên kết nhanh chóng</h2>
+    <input type="text" id="linkInput" placeholder="Nhập liên kết của bạn...">
+    <button onclick="copyLink()">Sao chép</button>
+    <p id="status"></p>
+  </main>
+
+  <footer>
+    <p>© 2025 T3DLab | Liên hệ Zalo: 0987651480</p>
+  </footer>
+
+  <script>
+    function copyLink() {
+      const input = document.getElementById('linkInput');
+      navigator.clipboard.writeText(input.value);
+      document.getElementById('status').innerText = "✅ Đã sao chép liên kết!";
+    }
+  </script>
+</body>
+</html>
